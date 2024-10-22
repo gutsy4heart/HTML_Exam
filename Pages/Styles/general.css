@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: var(--header-height);
+    background-color: var(--bg-color);
+}
+
+main {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+p {
+    color: var(--secondary-color);
+    text-align: center;
+}
