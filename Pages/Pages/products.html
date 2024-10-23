@@ -10,20 +10,40 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <!-- Лого можно добавить здесь -->
-            </div>
+
             <ul class="menu">
+                <li class="logo"><a href="#">Logo</a></li>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.html" class="active">Products</a></li>
-                <li><a href="#">Services</a></li>
-
+                <li class="services-menu">
+                    <a href="#" class="services-link">Services</a>
+                    <ul class="services-child">
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                        <li><a href="#">Service 3</a></li>
+                    </ul>
+                </li>
+                
             </ul>
+            
         </nav>
+        <input type="text" class="search-input">
+        <div class="container">
+            <button class="btn_search">Search</button>
+        </div>
     </header>
-
+    
+    <div class="after_header">
+        <h1 class="well">Well Well</h1>
+        <p class="p_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi pariatur voluptatum consectetur similique quo iure, odit facere quos doloribus corrupti. Sit nam ipsum quo beatae, nisi molestias aliquid. Voluptas, atque.
+            <div>
+                <button class="button">Well</button>
+            </div>
+        </div>
+    <div class=""></div>
     <main>
+
         <section>
             <h1>Our Products</h1>
             <p>This is the products page content.</p>
@@ -31,7 +51,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Corporate. All Rights Reserved.</p>
+        <a href="#">Terms & Conditions | Privacy Policy | Contact</a>
     </footer>
+    <footer>
+        <a>Copyright &copy; Example.com 2024</a>
+    </footer>
+    
 </body>
 </html>

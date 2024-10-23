@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin-top: var(--header-height);
-    background-color: var(--bg-color);
+    background-color: none
 }
 
 main {
@@ -10,12 +9,42 @@ main {
     padding: 20px;
 }
 
-h1 {
-    color: var(--primary-color);
+h1{
+    text-align: center;
+}
+.well {
+    color: #adff2f;
     text-align: center;
 }
 
 p {
-    color: var(--secondary-color);
     text-align: center;
 }
+.p_text {
+    color: #adff2f;
+    text-align: center;
+    font-size: 18px;
+}
+.after_header {
+    background-color: #9acd32; 
+    text-align: center; 
+    padding: 80px;
+}
+
+.button {
+    background-color: #337ab7; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: inline; /* Отображаем как блочный элемент для верного позиционирования */
+    margin-top: 18px;
+}
+
+.button:hover {
+    background-color: #337ab7; 
+}
+

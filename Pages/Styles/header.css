@@ -1,32 +1,54 @@
+
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--bg-color);
-    height: var(--header-height);
+    background-color: #222;
+    height: 50px;
     display: flex;
-    justify-content: flex-start; /* Выравнивание содержимого по левому краю */
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     z-index: 10;
 }
 
 nav {
     display: flex;
-    justify-content: flex-start; /* Меню будет слева */
+    justify-content: flex-start; 
     width: 100%;
     align-items: center;
+    margin-left: 33px;
+}
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    
 }
 
+.btn_search {
+    padding: 6px 12px;
+    font-weight: 400;
+    border: 1px solid;
+    border-radius: 4px;
+    text-align: right;
+    cursor: pointer;
+}
+.search-input{
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
 .menu {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin-left: 0; /* Убираем отступы слева */
+ 
 }
 
 .menu li a {
     text-decoration: none;
+    position: relative;
     color: var(--secondary-color);
     padding: 10px 15px;
     transition: background-color 0.3s ease;
@@ -40,4 +62,127 @@ nav {
 .menu li a:hover {
     background-color: var(--primary-color);
     color: white;
+}
+@media (max-width: 768px) {
+    /* Уменьшаем размер шрифта для мобильных устройств */
+    body {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .search-input, .btn_search {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .btn_search {
+        text-align: center;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+
+    .menu li a {
+        padding: 8px 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .btn_search {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer a {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+.services-child {
+    display: none;
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    background-color: #222;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    border-radius: 4px;
+    
+}
+
+.services-child li {
+    margin-bottom: 5px;
+}
+
+.services-child li a {
+    color: white;
+    padding: 5px 10px;
+    display: block;
+}
+
+.services-child li a:hover {
+    background-color: #555;
+}
+
+/* Показываем подменю при наведении на пункт Services */
+.services-menu:hover .services-child {
+    display: block;
+    
+}
+
+/* Для мобильных устройств, раскрываем подменю при фокусе */
+.services-menu:focus-within .services-child {
+    display: block;
+}
+
+/* подменю на мобильных */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .services-submenu {
+        position: static;
+        width: 100%;
+        padding: 0;
+    }
+
+    .services-submenu li a {
+        padding: 10px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
 }
