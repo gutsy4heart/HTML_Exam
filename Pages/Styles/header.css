@@ -60,6 +60,7 @@ nav {
 .menu li a.active {
     background-color: var(--primary-color);
     color: white;
+    
 }
 
 .menu li a:hover {
@@ -133,15 +134,9 @@ nav {
 
 .services-child {
     display: none;
-<<<<<<< HEAD
     position: absolute;
     top: 100%; 
     left: auto;
-=======
-    position: relative;
-    top: 50%; 
-    left: 0;
->>>>>>> de6d7607f072271a8fa799dc1f23775e15abafb5
     background-color: #222;
     padding: 10px;
     list-style: none;
