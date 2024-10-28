@@ -89,13 +89,14 @@ small {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px; /* Увеличенный padding для ровного внешнего вида */
+    padding: 50px; /* Увеличенный padding для ровного внешнего вида */
     max-width: 1170px; /* Максимальная ширина */
     margin: 0 auto; /* Центрируем */
     background-color: #daa520;
     color: #000;
     text-align: center;
     box-sizing: border-box;
+
 }
 
 /* Стили для article внутри .orange-side */
