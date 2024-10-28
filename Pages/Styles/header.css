@@ -2,18 +2,17 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px; /* Высота хедера */
+    height: 50px;
     background-color: #222;
-    display: flex; /* Используем flexbox */
-    align-items: center; /* Выравниваем по вертикали */
+    display: flex;
+    align-items: center;
     padding: 0 90px;
     z-index: 10;
 }
 
-
 nav {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     width: 100%;
     align-items: center;
     margin-left: 33px;
@@ -46,7 +45,7 @@ nav {
     list-style: none;
     display: flex;
     gap: 20px;
-    align-items: center; /* Выравниваем элементы по вертикали */
+    align-items: center;
 }
 
 .menu li a {
@@ -60,7 +59,6 @@ nav {
 .menu li a.active {
     background-color: var(--primary-color);
     color: white;
-    
 }
 
 .menu li a:hover {
@@ -68,6 +66,21 @@ nav {
     color: white;
 }
 
+/* Скрываем чекбокс по умолчанию */
+.menu-toggle {
+    display: none;
+}
+
+/* Стили для кнопки меню на мобильных */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Стили для мобильных устройств */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
@@ -80,14 +93,33 @@ nav {
     }
 
     .menu {
+        display: none;
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        max-height: 70vh; /* Ограничение высоты меню */
+        overflow-y: auto; /* Прокрутка при переполнении */
+        z-index: 10;
+    }
+
+    /* Показываем меню, когда чекбокс отмечен */
+    .menu-toggle:checked + .menu-btn + .menu {
+        display: flex;
+    }
+
+    /* Показываем кнопку меню */
+    .menu-btn {
+        display: block;
     }
 
     header {
-        height: auto; /* Высота адаптивная */
-        flex-direction: column; /* Вертикальное расположение */
+        height: auto;
+        flex-direction: row;
         padding: 10px 20px;
     }
 
@@ -134,14 +166,15 @@ nav {
 
 .services-child {
     display: none;
-    position: absolute;
-    top: 100%; 
-    left: auto;
+    position: relative; /* Relative для мобильной версии */
     background-color: #222;
     padding: 10px;
     list-style: none;
     margin: 0;
     border-radius: 4px;
+    max-height: 200px; /* Ограничение высоты подменю */
+    overflow-y: auto; /* Прокрутка для подменю */
+    width: 100%;
 }
 
 .services-child li {
@@ -168,7 +201,7 @@ nav {
     display: block;
 }
 
-/* подменю на мобильных */
+/* Подменю на мобильных */
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;

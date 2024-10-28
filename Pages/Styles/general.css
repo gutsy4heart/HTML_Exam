@@ -6,6 +6,7 @@ body {
 }
 
 main {
+
     max-width: 1170px; /* Ограничиваем ширину страницы */
     margin: 0 auto; /* Центрируем содержимое */
     padding: 0 15px; /* Добавляем отступы для края */
@@ -37,6 +38,7 @@ h1 {
     padding: 80px;
     box-sizing: border-box;
 }
+
 
 .button {
     background-color: #337ab7;
@@ -80,6 +82,7 @@ small {
     align-items: center; /* Центрируем элементы внутри article */
     padding: 15px;
     text-align: center;
+
 }
 
 .orange-side {
@@ -127,7 +130,7 @@ small {
 @media (max-width: 768px) {
     .main1,
     .orange-side {
-        grid-template-columns: 1fr; /* Один столбец на узких экранах */
+        grid-template-columns: 2fr; /* Один столбец на узких экранах */
     }
 }
 
